@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.css";
 import { css } from "emotion";
-import TodoList from "./TodoList";
-import TodoInput from "./TodoInput";
+import CustomHookExample from "./CustomHookExample";
+import ReduxHooksExample from "./redux-hooks-example/ReduxHooksExample";
 
 export default function App() {
   return (
-    <div className={styles.root}>
-      <h1>Todo</h1>
-      <TodoInput />
-      <TodoList />
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      <div className={styles.root}>
+        <CustomHookExample />
+      </div>
+      <div className={styles.root}>
+        <ReduxHooksExample />
+      </div>
     </div>
   );
 }
@@ -20,6 +23,6 @@ const styles = {
     font-family: system-ui;
     margin: 24px auto;
     padding: 4px 24px 24px 24px;
-    width: 300px;
+    width: 500px;
   `
 };

@@ -1,6 +1,6 @@
 import { css } from "emotion";
 import React, { useCallback } from "react";
-import { useMappedState } from "./redux/store";
+import { useMappedState } from "../redux/store";
 import TodoItem from "./TodoItem";
 
 export default function TodoList() {
@@ -13,6 +13,7 @@ export default function TodoList() {
       []
     )
   );
+
   return (
     <div>
       <div className={styles.count}>You have {todoCount} todos</div>
